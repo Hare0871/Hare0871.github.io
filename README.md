@@ -1,1 +1,0 @@
-# Hare0871.github.io
