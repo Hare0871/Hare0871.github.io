@@ -1,13 +1,58 @@
-body {
-  background-color:rgb(13, 67, 59);
+/* 日间模式（默认） */
+:root {
+    --bg-color: #F7F4ED;
+    --text-color: #51c3c1;
+    --btn-text: #ED5126;
+    --btn-bd: #ED5126;
 }
 
-h1 {
-  color:rgb(142, 1, 60);
-  text-align: center;
+/* 夜间模式 */
+.dark-mode {
+    --bg-color: #1A1A2E;
+    --text-color: #EEF7F2;
+    --btn-text: #F8DF70;
+    --btn-bd: #F8DF70;
+}
+
+/* 应用颜色 */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 楷体;
+    margin: 0;
+    min-height: 100vh;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+/* 按钮样式（固定在右上角） */
+#themeToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 16px 8px;
+    background-color: var(--bg-color);
+    color: var(--btn-text);
+    border: 2px solid var(--btn-bd);
+    cursor: pointer;
+    flex-direction: column;
+    font-family: 楷体;
+    font-size: 18px;
+    letter-spacing: 2px;
+    transition: background-color 0.2s, color 0.2s;
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+}
+
+#themeToggle:hover {
+    opacity: 0.8;
+}
+
+/* 页面内容样式（可选，让内容好看一点） */
+h1,p{
+    text-align: center;
+    margin-top: 50px;
 }
 
 p {
-  color:rgb(2, 179, 140);
-  margin-left: 40px;
+    font-size: 18px;
 }
